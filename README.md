@@ -218,9 +218,8 @@ If a library is unavailable with Python 3, it should be reported to be investiga
 
 Case should adhere to the following style:
 
-||||
-|-|-|-|
 | **Type**                  | **Case**   | **Examples** |
+|---------------------------|------------|--------------|
 | Variables and all objects | Snake case | `led`, `elec_hi_snare`|
 | Functions                 | Snake case | `setup_gpio` |
 | Class names               | Title case | `Dog`, `GameWindow`, `GameOfLife` |
