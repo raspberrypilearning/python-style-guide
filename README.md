@@ -445,7 +445,7 @@ result = some_function_that_takes_arguments(
 
 ## `with` keyword
 
-The `with` keyword should be used where possible, for example when opening files, and in the `picamera` module. This ensures cleanup is completed.
+The `with` keyword should be used where possible, for example when opening files. This ensures cleanup is completed.
 
 Bad:
 
@@ -453,6 +453,7 @@ Bad:
 f = open('file.txt', 'r')
 text = f.read()
 print(text)
+f.close()
 ```
 
 Good:
@@ -463,23 +464,9 @@ with open('file.txt', 'r') as f:
     print(text)
 ```
 
-Bad:
-
-```python
-camera = PiCamera()
-camera.capture('/home/pi/img.jpg')
-```
-
-Good:
-
-```python
-with PiCamera() as camera:
-    camera.capture('/home/pi/img.jpg')
-```
-
 ## Booleans
 
-
+xxx
 
 ## Exceptions
 
@@ -503,7 +490,7 @@ except KeyError:
     a = lookup('a')
 ```
 
-A bare `except` clause will catch `SystemExit` and `KeyboardInterrupt` exceptions, making it harder to interrupt a program with `Ctrl-C`, and can disguise other problems
+A bare `except` clause will catch `SystemExit` and `KeyboardInterrupt` exceptions, making it harder to interrupt a program with `Ctrl-C`, and can disguise other problems.
 
 ## Comments - and naming things
 
